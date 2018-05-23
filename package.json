@@ -1,12 +1,13 @@
 {
-    "name": "cundef",
-    "version": "1.0.0",
-    "description": "Cuntent definitions.",
-    "main": "dist/index.js",
-    "typings": "dist/index",
-    "scripts": {
-
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "cundef",
+  "version": "1.0.0",
+  "description": "Cuntent definitions.",
+  "main": "dist/index.js",
+  "typings": "dist/index",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.1.2"
+  }
 }
