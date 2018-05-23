@@ -7,9 +7,9 @@ import { VersionedMultiatom } from './VersionedMultiatom'
 export interface Project {
     title: string
     classname: string
-    maps: [AssetMap]
-    unsin: [UnversionedSingleatom]
-    versin: [VersionedSingleAtom]
-    unmul: [UnversionedMultiatom]
-    vermul: [VersionedMultiatom]
+    maps: AssetMap[]
+    unsin: UnversionedSingleatom[]
+    versin: VersionedSingleAtom[]
+    unmul: UnversionedMultiatom[]
+    vermul: VersionedMultiatom[]
 }
