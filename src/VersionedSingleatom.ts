@@ -1,0 +1,3 @@
+interface VersionedSingleAtom extends UnversionedSingleatom {
+
+}

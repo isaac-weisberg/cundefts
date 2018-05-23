@@ -1,0 +1,11 @@
+{
+    "name": "cundef",
+    "version": "1.0.0",
+    "description": "Cuntent definitions.",
+    "main": "index.js",
+    "scripts": {
+
+    },
+    "author": "",
+    "license": "ISC"
+}

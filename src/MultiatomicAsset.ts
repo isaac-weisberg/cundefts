@@ -1,0 +1,3 @@
+interface MultiatomicAsset {
+    keys: string[]
+}

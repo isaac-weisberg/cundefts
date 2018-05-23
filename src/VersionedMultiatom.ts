@@ -1,0 +1,3 @@
+interface VersionedMultiatom extends UnversionedMultiatom {
+
+}
