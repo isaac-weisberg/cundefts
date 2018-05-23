@@ -1,3 +1,5 @@
-interface VersionedMultiatom extends UnversionedMultiatom {
+import { UnversionedMultiatom } from "./UnversionedMultiatom"
+
+export interface VersionedMultiatom extends UnversionedMultiatom {
 
 }

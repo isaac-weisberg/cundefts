@@ -1,3 +1,3 @@
-interface MultiatomicAsset {
+export interface MultiatomicAsset {
     keys: string[]
 }

@@ -1,4 +1,4 @@
-interface UnversionedSingleatom {
+export interface UnversionedSingleatom {
     title: string
     root: string
     codepath: string
