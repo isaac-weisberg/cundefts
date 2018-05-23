@@ -2,7 +2,7 @@
     "name": "cundef",
     "version": "1.0.0",
     "description": "Cuntent definitions.",
-    "main": "dist/index.js",
+    "main": "dist/index",
     "scripts": {
 
     },
