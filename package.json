@@ -4,7 +4,9 @@
   "description": "Cuntent definitions.",
   "main": "dist/index.js",
   "typings": "dist/index",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "tsc"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
