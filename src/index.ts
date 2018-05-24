@@ -1,5 +1,5 @@
 export * from './AssetMap'
-export * from './MultiatomicAsset'
+export * from './Multiatom'
 export * from './Project'
 export * from './UnversionedMultiatom'
 export * from './UnversionedSingleatom'
