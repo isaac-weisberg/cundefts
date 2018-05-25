@@ -9,7 +9,7 @@ export interface Project {
     title: string
     classname: string
     maps: AssetMap[]
-    generals: GeneralAsset
+    generals: GeneralAsset[]
     unsin: UnversionedSingleatom[]
     versin: VersionedSingleAtom[]
     unmul: UnversionedMultiatom[]
