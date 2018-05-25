@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "tsc"
   },
-  "author": "",
+  "author": "Isaac Carol Weisberg",
   "license": "ISC",
   "dependencies": {
   }
