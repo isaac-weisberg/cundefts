@@ -8,6 +8,7 @@
 		"baseUrl": ".",
 		"declaration": true,
 		"strictNullChecks": true,
+		"removeComments": true,
 		"paths": {
 			"*": ["node_modules/*"]
 		}
