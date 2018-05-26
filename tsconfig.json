@@ -7,6 +7,7 @@
 		"outDir": "dist",
 		"baseUrl": ".",
 		"declaration": true,
+		"strictNullChecks": true,
 		"paths": {
 			"*": ["node_modules/*"]
 		}
