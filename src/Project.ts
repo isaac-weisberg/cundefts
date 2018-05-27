@@ -45,17 +45,17 @@ import { JsonObject, JsonProperty } from 'json2typescript'
     classname: string = ""
 
     @JsonProperty("generals", [GeneralAssetDeclaration], true)
-    generals: GeneralAssetDeclaration[]|undefined = undefined
+    generals: GeneralAssetDeclaration[] = []
 
     @JsonProperty("unsin", [SingleatomicAssetDeclaration], true)
-    unsin: SingleatomicAssetDeclaration[]|undefined = undefined
+    unsin: SingleatomicAssetDeclaration[] = []
 
     @JsonProperty("versin", [VersionedSingleatomicAssetDeclaration], true)
-    versin: VersionedSingleatomicAssetDeclaration[]|undefined = undefined
+    versin: VersionedSingleatomicAssetDeclaration[] = []
 
     @JsonProperty("unmul", [MultiatomicAssetDeclaration], true)
-    unmul: MultiatomicAssetDeclaration[]|undefined = undefined
+    unmul: MultiatomicAssetDeclaration[] = []
 
     @JsonProperty("vermul", [VersionedMultiatomicAssetDeclaration], true)
-    vermul: VersionedMultiatomicAssetDeclaration[]|undefined = undefined
+    vermul: VersionedMultiatomicAssetDeclaration[] = []
 }
