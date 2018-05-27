@@ -10,5 +10,6 @@
   "author": "Isaac Carol Weisberg",
   "license": "ISC",
   "dependencies": {
+    "json2typescript": "^1.0.5"
   }
 }

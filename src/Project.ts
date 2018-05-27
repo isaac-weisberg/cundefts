@@ -1,58 +1,61 @@
-// dirty hack kekeke
-export const canonical: Project = {
-    classname: "",
-    generals: [],
-    title: "",
-    unmul: [],
-    unsin: [],
-    vermul: [],
-    versin: []
+import { JsonObject, JsonProperty } from 'json2typescript'
+
+@JsonObject export class MultiatomicAssetSchema {
+    @JsonProperty("keys", [String])
+    keys: string[] = []
 }
 
-export interface Project {
-    title: string|undefined
-    classname: string|undefined
-    generals: GeneralAssetDeclaration[]|undefined
-    unsin: SingleatomicAssetDeclaration[]|undefined
-    versin: VersionedSingleatomicAssetDeclaration[]|undefined
-    unmul: MultiatomicAssetDeclaration[]|undefined
-    vermul: VersionedMultiatomicAssetDeclaration[]|undefined
+@JsonObject export class GeneralAssetDeclaration {
+    @JsonProperty("title", String)
+    title: string = ""
+
+    @JsonProperty("codepath", String)
+    codepath: string = ""
+
+    @JsonProperty("classname", String)
+    classname: string = ""
+
+    @JsonProperty("stringKeys", [String])
+    stringKeys: string[] = []
 }
 
-export interface SanitizedProject {
-    title: string
-    classname: string
-    generals: GeneralAssetDeclaration[]
-    unsin: SingleatomicAssetDeclaration[]
-    versin: VersionedSingleatomicAssetDeclaration[]
-    unmul: MultiatomicAssetDeclaration[]
-    vermul: VersionedMultiatomicAssetDeclaration[]
-
+@JsonObject export class SingleatomicAssetDeclaration extends GeneralAssetDeclaration {
+    @JsonProperty("root", String)
+    root: string = ""
 }
 
-export interface GeneralAssetDeclaration {
-    title: string
-    codepath: string
-    classname: string
-    stringKeys: string[]
+@JsonObject export class MultiatomicAssetDeclaration extends SingleatomicAssetDeclaration {
+    @JsonProperty("assetSchema", MultiatomicAssetSchema)
+    assetSchema: MultiatomicAssetSchema|undefined = undefined
 }
 
-export interface SingleatomicAssetDeclaration extends GeneralAssetDeclaration {
-    root: string
-}
-
-export interface MultiatomicAssetDeclaration extends SingleatomicAssetDeclaration {
-    assetSchema: MultiatomicAssetSchema
-}
-
-export interface MultiatomicAssetSchema {
-    keys: string[]
-}
-
-export interface VersionedSingleatomicAssetDeclaration extends SingleatomicAssetDeclaration {
+@JsonObject export class VersionedSingleatomicAssetDeclaration extends SingleatomicAssetDeclaration {
 
 }
 
-export interface VersionedMultiatomicAssetDeclaration extends MultiatomicAssetDeclaration {
+@JsonObject export class VersionedMultiatomicAssetDeclaration extends MultiatomicAssetDeclaration {
 
+}
+
+@JsonObject export class Project {
+    @JsonProperty("title", String)
+    title: string = ""
+
+    @JsonProperty("classname", String)
+    classname: string = ""
+
+    @JsonProperty("generals", [GeneralAssetDeclaration], true)
+    generals: GeneralAssetDeclaration[]|undefined = undefined
+
+    @JsonProperty("unsin", [SingleatomicAssetDeclaration], true)
+    unsin: SingleatomicAssetDeclaration[]|undefined = undefined
+
+    @JsonProperty("versin", [VersionedSingleatomicAssetDeclaration], true)
+    versin: VersionedSingleatomicAssetDeclaration[]|undefined = undefined
+
+    @JsonProperty("unmul", [MultiatomicAssetDeclaration], true)
+    unmul: MultiatomicAssetDeclaration[]|undefined = undefined
+
+    @JsonProperty("vermul", [VersionedMultiatomicAssetDeclaration], true)
+    vermul: VersionedMultiatomicAssetDeclaration[]|undefined = undefined
 }
