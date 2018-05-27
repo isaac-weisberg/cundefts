@@ -1,3 +1,14 @@
+// dirty hack kekeke
+export const canonical: Project = {
+    classname: "",
+    generals: [],
+    title: "",
+    unmul: [],
+    unsin: [],
+    vermul: [],
+    versin: []
+}
+
 export interface Project {
     title: string|undefined
     classname: string|undefined
