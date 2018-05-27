@@ -26,7 +26,7 @@ import { JsonObject, JsonProperty } from 'json2typescript'
 
 @JsonObject export class MultiatomicAssetDeclaration extends SingleatomicAssetDeclaration {
     @JsonProperty("assetSchema", MultiatomicAssetSchema)
-    assetSchema: MultiatomicAssetSchema|undefined = undefined
+    assetSchema: MultiatomicAssetSchema = new MultiatomicAssetSchema()
 }
 
 @JsonObject export class VersionedSingleatomicAssetDeclaration extends SingleatomicAssetDeclaration {
