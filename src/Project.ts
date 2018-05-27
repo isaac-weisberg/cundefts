@@ -1,4 +1,14 @@
 export interface Project {
+    title: string|undefined
+    classname: string|undefined
+    generals: GeneralAssetDeclaration[]|undefined
+    unsin: SingleatomicAssetDeclaration[]|undefined
+    versin: VersionedSingleatomicAssetDeclaration[]|undefined
+    unmul: MultiatomicAssetDeclaration[]|undefined
+    vermul: VersionedMultiatomicAssetDeclaration[]|undefined
+}
+
+export interface SanitizedProject {
     title: string
     classname: string
     generals: GeneralAssetDeclaration[]
@@ -6,6 +16,7 @@ export interface Project {
     versin: VersionedSingleatomicAssetDeclaration[]
     unmul: MultiatomicAssetDeclaration[]
     vermul: VersionedMultiatomicAssetDeclaration[]
+
 }
 
 export interface GeneralAssetDeclaration {
